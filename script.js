@@ -200,3 +200,20 @@ while (j < 100) {
 *Functions: 
 
 /*ARRAY.FILTER
+
+/*DOM Manipulation
+  Manipulating the DOM means using JavaScript to manipulate elements from your HTML code*/
+  /*HTML*/
+  <button onclick="mostraAlerta()"></button>
+  
+  /*JavaScript*/
+
+  function mostraAlerta() {
+    alert('Botão foi clicado')
+  }
+
+/*How to refer HTML elements on JavaScript:*/
+- document.getElementbyId('[insert here the elements ID]');
+- document.getElementsByTagName('[insert here the type of tag (p, a , img, etc) you want to use]'); /* This method always returns an array,since it can't know if there will be one or more elements wth that tag*/
+- document.getElementByClassName([insert class name here]); /*This also returns an array, since a class isn't unique to a single element*/
+- document.querySelector('body div#app input');/*querySelector allows you to walk through the DOM using the cascating systm from CSS to find a specific item. Only returns a single element, unless you use querySelectorAll*/
