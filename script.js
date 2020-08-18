@@ -215,5 +215,23 @@ while (j < 100) {
 /*How to refer HTML elements on JavaScript:*/
 - document.getElementbyId('[insert here the elements ID]');
 - document.getElementsByTagName('[insert here the type of tag (p, a , img, etc) you want to use]'); /* This method always returns an array,since it can't know if there will be one or more elements wth that tag*/
-- document.getElementByClassName([insert class name here]); /*This also returns an array, since a class isn't unique to a single element*/
+- document.getElementByClassName([insert className here]); /*This also returns an array, since a class isn't unique to a single element*/
 - document.querySelector('body div#app input');/*querySelector allows you to walk through the DOM using the cascating systm from CSS to find a specific item. Only returns a single element, unless you use querySelectorAll*/
+
+/*How to create HTML through JavaScript*/
+const linkElement = document.createElement('a') /*This will create an element with the tag a, indicating it will be a link*/
+linkElement.setAttribute('href', '[insert url here]') /*This creates the attribute href and adds a URL to it*/
+
+const textElement = document.createTextNode('Acesse o ite')/*This creates another element, this time its a text*/
+linkElement.appendChild(textElement); /*append Child makes this text a 'child' of the linkElement'*/
+
+const containerElement = document.querySelector('#app')/*selects the div App as the containerElemet*/
+containerElement.appendChild(linkElement); /*The text is a child of the URL and now the URL is a child of the App DIV, successfuly embebeding the link on the text and putting them on the screen*/
+
+removeChild /*is a functions able to remove a child from its parent element or DIV*/
+
+/*Manipulating CSS styling with JavaScript*/
+const boxElement = document.querySelector('.box');
+
+boxElement.style.width = 100 /*On this example I set the boxElement width to 100px. When using JS, there's no need to add px after the number.*/
+boxElement.style.backgroundColor = '#f0f0f0';
